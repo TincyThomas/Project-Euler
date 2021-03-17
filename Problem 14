@@ -1,0 +1,32 @@
+import time
+n =int(input())
+start= time.time()
+li=[]
+q=[]
+for i in range(n,1,-1):
+    l = [i]
+    k = 1
+    while True:
+        if i % 2 == 0:
+            i = int(i / 2)
+            l.append(i)
+            k = k + 1
+            if i == 1:
+                break
+        else:
+            i = int(3 * i + 1)
+            l.append(i)
+            k = k + 1
+            if i == 1:
+                break
+
+    #print(l,"l")
+    #print(k,"count")
+    li.append(l[0])
+    q.append(k)
+#print(li)
+#print(q)
+#print(q.index(max(q)))
+print(li[q.index(max(q))])
+end=time.time()
+print(end-start)
