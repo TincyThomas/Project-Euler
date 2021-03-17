@@ -1,0 +1,16 @@
+import time
+n = int(input())
+starttime= time.time()
+for i in range(3,int(n/2),2):
+    if n==i:
+        break
+    else:
+        if n%2==0:
+            n=n/2
+            #print(n)
+        elif n%i==0:
+            n=n/i
+
+print(int(n))
+endtime=time.time()
+print(endtime-starttime)
